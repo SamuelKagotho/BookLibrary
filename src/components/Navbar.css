@@ -1,0 +1,53 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #007bff;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Navbar Hover Effects */
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ffcc00;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffcc00;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive Navbar */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
